@@ -1,26 +1,26 @@
-# 随机数生成器
+# Random Number Generator
 
-这是一个简单的Python随机数生成器程序。
+A simple Python random number generator program.
 
-## 功能
+## Features
 
-- 生成指定范围内的随机数
-- 支持整数和浮点数生成
-- 可以设置生成数量
+- Generate random numbers within specified ranges
+- Support for both integer and floating-point number generation
+- Configurable number of generations
 
-## 使用方法
+## Usage
 
-1. 确保已安装Python 3.x
-2. 运行程序：
+1. Ensure Python 3.x is installed
+2. Run the program:
    ```bash
    python randomNumber.py
    ```
 
-## 依赖
+## Dependencies
 
 - Python 3.x
-- random 模块（Python标准库）
+- random module (Python standard library)
 
-## 许可证
+## License
 
 MIT License 
