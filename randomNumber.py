@@ -18,8 +18,8 @@ class RandomNumberGenerator:
         self.main_frame.grid(row=0, column=0, sticky="nsew")
         
         # Configure main frame to center its children
-        self.main_frame.grid_rowconfigure(0, weight=3)  # More weight for number display
-        self.main_frame.grid_rowconfigure(1, weight=1)  # Less weight for button
+        self.main_frame.grid_rowconfigure(0, weight=3)  
+        self.main_frame.grid_rowconfigure(1, weight=1)  
         self.main_frame.grid_columnconfigure(0, weight=1)
         
         # Create number display label
@@ -41,7 +41,7 @@ class RandomNumberGenerator:
             self.button_frame,
             text="Generate",
             command=self.generate_number,
-            width=15  # Set fixed width for the button
+            width=15  #  button width 
         )
         self.generate_button.grid(row=0, column=0, pady=20)
         
@@ -60,11 +60,10 @@ class RandomNumberGenerator:
     def animate_number(self):
         if self.is_animating:
             if self.animation_count < 30:  # Animation lasts for 30 changes
-                # Display random number with larger font
                 random_num = random.randint(1, 99)
                 self.number_label.config(
                     text=str(random_num),
-                    font=("Arial", 72)  # Larger font for numbers
+                    font=("Arial", 72)  # numbers font
                 )
                 
                 self.animation_count += 1
@@ -73,7 +72,7 @@ class RandomNumberGenerator:
                 # Display final result
                 self.number_label.config(
                     text=str(self.final_number),
-                    font=("Arial", 72)  # Keep larger font for final number
+                    font=("Arial", 72)  # final number font
                 )
                 self.is_animating = False
 
