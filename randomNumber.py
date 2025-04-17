@@ -64,6 +64,9 @@ class RandomNumberGenerator:
             tags="text"
         )
         
+        # 文字を中央に配置
+        self.root.after(100, self.center_text)
+        
         # ボタンフレームの作成
         self.button_frame = ttk.Frame(self.main_frame)
         self.button_frame.grid(row=1, column=0, sticky="nsew")
@@ -192,7 +195,7 @@ class RandomNumberGenerator:
                     self.canvas_text,
                     text=str(random_num),
                     font=("Arial", 200),
-                    fill='white'
+                    fill='black'  # 数字の色を黒に変更
                 )
                 self.canvas.coords(
                     self.canvas_text,
@@ -210,7 +213,7 @@ class RandomNumberGenerator:
                     self.canvas_text,
                     text=str(self.final_number),
                     font=("Arial", 200),
-                    fill='white'
+                    fill='black'  # 数字の色を黒に変更
                 )
                 self.canvas.coords(
                     self.canvas_text,
@@ -265,6 +268,18 @@ class RandomNumberGenerator:
             
         except ValueError:
             messagebox.showerror("エラー", "有効な数字を入力してください")
+
+    def center_text(self):
+        # キャンバスの実際のサイズを取得
+        canvas_width = self.canvas.winfo_width()
+        canvas_height = self.canvas.winfo_height()
+        
+        # 文字をキャンバスの中央に配置
+        self.canvas.coords(
+            self.canvas_text,
+            canvas_width // 2,
+            canvas_height // 2
+        )
 
 def main():
     root = tk.Tk()
