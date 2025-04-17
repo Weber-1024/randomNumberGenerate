@@ -5,7 +5,7 @@ A simple Python random number generator program.
 ## Features
 
 - Generate random numbers within specified ranges
-- Support for both integer and floating-point number generation
+- Support for integer generation
 - Configurable number of generations
 
 ## Usage
